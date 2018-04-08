@@ -112,7 +112,7 @@ for file_name in ipa_file_list:
     print file_name + ": look for P3 picture ..."
     picture_name_list = []
     for picture_info in picture_info_list:
-        if picture_info.get("DisplayGamut") == 'P3':
+        if picture_info.get("DisplayGamut") == 'P3' or picture_info.get("Encoding") == 'ARGB-16':
             picture_name = picture_info.get("RenditionName")
             picture_name_list.append(picture_name)
     print file_name + ": look for P3 picture success"
